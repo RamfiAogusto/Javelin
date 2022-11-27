@@ -15,8 +15,8 @@ def selec_link(num_link):
 	print("esta respuesta es de la pagina \n\n " + links[num_link])
 	print(parrafos + "\n \n" + "------------------AQUI TERMINAN LOS PARRAFOS--------------------")
 	
-
 """
+
 #------------------aqui busca y lista 5 links de cada pregunta-------
 
 
@@ -28,10 +28,10 @@ for i in search(pregunta_google, num_results=5, lang="es"):
 	print(i)
 	links.append(i)
 
-#print(links)
+print(links)
 
 
-#selec_link(3)
+#selec_link(0)
 #---------------------------------------------------------------------
 
 
