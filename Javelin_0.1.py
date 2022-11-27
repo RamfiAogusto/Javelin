@@ -18,13 +18,15 @@ def selec_link(num_link):
 
 
 #------------------aqui busca y lista 5 links de cada pregunta-------
+links=['uno', 'dos']
 
 pregunta_google= input("ingresa tu pregunta: ")
 for i in search(pregunta_google, num_results=5, lang="es"):
-	print(i)
+	
 	links.append=[i]
+print(links)
 
-selec_link(3)
+#selec_link(3)
 #---------------------------------------------------------------------
 
 
