@@ -1,30 +1,30 @@
 
 
-
 import requests
 from googlesearch import search
 from bs4 import BeautifulSoup
 
-#------------------------------Libreria google o google search-------
-lista_link=[""]
 
-pregunta_google= str(input("ingresa tu pregunta: "))
 
-for i in search(pregunta_google, num_results=4, lang="es"):
-	lista_link.append(i)
+#------------------declaracion de funciones--------------------------
 
-def buscar(num):
-	response = requests.get(lista_link[num])
-	print(response)
-	print(lista_link[num])
+def selec_link(num_link):
+	response = requests.get(links[num_link])
 	soup=BeautifulSoup(response.content, 'html.parser')
-	content = response.content  
-	content_html = soup.find_all("p")
-	print(content_html)
+	parrafos=soup.find_all("p")
+	print("esta respuesta es de la pagina \n\n " + links[num_link])
+	print(parrafos + "\n \n" + "------------------AQUI TERMINAN LOS PARRAFOS--------------------")
+	
 
 
+#------------------aqui busca y lista 5 links de cada pregunta-------
 
-buscar(2)
+pregunta_google= input("ingresa tu pregunta: ")
+for i in search(pregunta_google, num_results=5, lang="es"):
+	print(i)
+	links.append=[i]
 
-
+selec_link(3)
 #---------------------------------------------------------------------
+
+
